@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
 import Communities from "./pages/Communities";
+import CommunityDetails from "./pages/CommunityDetails";
 import Marketing from "./pages/Marketing";
 import Leads from "./pages/Leads";
 import MoveIns from "./pages/MoveIns";
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/communities" element={<Communities />} />
+          <Route path="/communities/:id" element={<CommunityDetails />} />
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/leads" element={<Leads />} />
           <Route path="/moveins" element={<MoveIns />} />

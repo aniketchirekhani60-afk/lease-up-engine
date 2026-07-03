@@ -30,3 +30,5 @@ export const communitiesData = [
     status: "Attention",
   },
 ];
+
+export type Community = (typeof communitiesData)[number];

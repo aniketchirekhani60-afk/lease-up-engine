@@ -7,6 +7,7 @@ function CommunityList() {
       {communitiesData.map((community) => (
         <CommunityCard
           key={community.id}
+          id={community.id}
           name={community.name}
           stage={community.stage}
           occupancy={community.occupancy}

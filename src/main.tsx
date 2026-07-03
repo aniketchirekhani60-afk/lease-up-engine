@@ -7,6 +7,7 @@ import "./styles/cards.css";
 import "./styles/dashboard.css";
 import "./styles/communities.css";
 import "./styles/table.css";
+import "./styles/community-details.css";
 import App from "./App";
 
 createRoot(document.getElementById("root")!).render(

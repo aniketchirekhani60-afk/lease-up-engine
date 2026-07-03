@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import StatusBadge from "./StatusBadge";
 
 type CommunityCardProps = {
+  id: number;
   name: string;
   stage: string;
   occupancy: number;
@@ -10,6 +12,7 @@ type CommunityCardProps = {
 };
 
 function CommunityCard({
+  id,
   name,
   stage,
   occupancy,
@@ -17,6 +20,8 @@ function CommunityCard({
   manager,
   status,
 }: CommunityCardProps) {
+  const navigate = useNavigate();
+
   return (
     <div className="card community-card">
       <div className="community-header">
@@ -47,7 +52,12 @@ function CommunityCard({
         </div>
       </div>
 
-      <button className="btn btn-primary">View Details</button>
+      <button
+        className="btn btn-primary"
+        onClick={() => navigate(`/communities/${id}`)}
+      >
+        View Details
+      </button>
     </div>
   );
 }
