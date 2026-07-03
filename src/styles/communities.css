@@ -1,0 +1,108 @@
+/* -------------------------------------------------
+   COMMUNITIES PAGE
+------------------------------------------------- */
+
+.community-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+}
+
+.community-name {
+  font-size: 20px;
+  color: var(--color-text-primary);
+}
+
+.community-stage {
+  margin-top: var(--space-1);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.community-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.community-detail-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.community-detail-value {
+  margin-top: var(--space-1);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.community-manager {
+  color: var(--color-text-primary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-accent-dark);
+  color: var(--color-text-inverse);
+}
+
+.btn-primary:hover {
+  background: #111827;
+}
+
+/* Search */
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--color-neutral-bg);
+  color: var(--color-neutral-text);
+}
+
+.status-on-track {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.status-complete {
+  background: var(--color-info-bg);
+  color: var(--color-info-text);
+}
+
+.status-attention {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}

@@ -1,0 +1,92 @@
+/* -------------------------------------------------
+   CARDS
+   Base card + variants reused across the whole app
+------------------------------------------------- */
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* KPI card */
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 220px;
+}
+
+.kpi-label {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.kpi-value {
+  margin: var(--space-1) 0;
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.kpi-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+}
+
+.kpi-trend {
+  color: var(--color-success-text);
+  font-weight: 600;
+}
+
+.kpi-target {
+  color: var(--color-text-muted);
+}
+
+/* Chart card */
+.chart-card {
+  height: 320px;
+}
+
+.chart-card-title {
+  margin-bottom: var(--space-4);
+  font-size: 20px;
+}
+
+/* Activity card */
+.activity-card-title {
+  margin-bottom: var(--space-2);
+  font-size: 20px;
+}
+
+.activity-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-time {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.activity-text {
+  margin-top: var(--space-1);
+  color: var(--color-text-secondary);
+}
+
+/* Community card */
+.community-card {
+  margin-bottom: var(--space-5);
+}

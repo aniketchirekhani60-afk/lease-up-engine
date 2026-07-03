@@ -1,27 +1,27 @@
 import Sidebar from "./components/layout/Sidebar";
+import { Routes, Route } from "react-router-dom";
+
+import Dashboard from "./pages/Dashboard";
+import Communities from "./pages/Communities";
+import Marketing from "./pages/Marketing";
+import Leads from "./pages/Leads";
+import MoveIns from "./pages/MoveIns";
+import Reports from "./pages/Reports";
 
 function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
+    <div className="app-layout">
       <Sidebar />
 
-      <main
-        style={{
-          flex: 1,
-          padding: "30px",
-          background: "#f3f4f6",
-          minHeight: "100vh",
-        }}
-      >
-        <h1>Executive Dashboard</h1>
-
-        <p>
-          Welcome to The Springs Living Lease-Up Engine.
-        </p>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/communities" element={<Communities />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/leads" element={<Leads />} />
+          <Route path="/moveins" element={<MoveIns />} />
+          <Route path="/reports" element={<Reports />} />
+        </Routes>
       </main>
     </div>
   );
