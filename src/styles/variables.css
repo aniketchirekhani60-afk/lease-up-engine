@@ -1,0 +1,118 @@
+/* -------------------------------------------------
+   DESIGN TOKENS
+   The Springs Living–inspired palette, spacing, radii,
+   shadows and typography scale.
+
+   Every other stylesheet in this app consumes these
+   custom properties by name (--color-surface, --space-5,
+   etc). Change a value here and it cascades to every
+   page automatically — nothing downstream needs to be
+   touched.
+------------------------------------------------- */
+
+:root {
+  /* ---- Raw brand palette ---- */
+  --brand-forest: #1e3a2f;
+  --brand-forest-dark: #142820;
+  --brand-forest-light: #e7efe9;
+  --brand-sage: #7c9473;
+  --brand-sage-dark: #62795a;
+  --brand-cream: #f7f4ec;
+  --brand-warm-white: #fffefb;
+  --brand-charcoal: #262622;
+  --brand-warm-gray: #e4dfd3;
+  --brand-warm-gray-light: #efebe2;
+
+  /* ---- Semantic roles (what components should reference) ---- */
+  --color-primary: var(--brand-forest);
+  --color-primary-hover: var(--brand-forest-dark);
+  --color-primary-tint: var(--brand-forest-light);
+  --color-secondary: var(--brand-sage);
+  --color-secondary-hover: var(--brand-sage-dark);
+
+  --color-bg: var(--brand-cream);
+  --color-surface: var(--brand-warm-white);
+  --color-row-alt: #faf8f2;
+  --color-row-hover: #f3efe3;
+  --color-border: var(--brand-warm-gray);
+  --color-border-light: var(--brand-warm-gray-light);
+
+  --color-text-primary: var(--brand-charcoal);
+  --color-text-secondary: #5b5a52;
+  --color-text-muted: #8c8a7f;
+  --color-text-inverse: #ffffff;
+
+  /* legacy aliases — existing stylesheets reference these names directly */
+  --color-accent: var(--color-primary);
+  --color-accent-dark: var(--brand-forest-dark);
+
+  --color-success-bg: #e3f0e6;
+  --color-success-text: #2f6b45;
+  --color-info-bg: var(--brand-forest-light);
+  --color-info-text: var(--brand-forest-dark);
+  --color-warning-bg: #fbf0dc;
+  --color-warning-text: #92650f;
+  --color-danger-bg: #f8e6e1;
+  --color-danger-text: #a23b2b;
+  --color-neutral-bg: var(--brand-warm-gray-light);
+  --color-neutral-text: #57564f;
+
+  /* lifecycle-stage badge tones (Lease-Up, Pre-Opening, ...) */
+  --color-leaseup-bg: #eaf1e6;
+  --color-leaseup-text: var(--brand-sage-dark);
+  --color-preopening-bg: #efebe2;
+  --color-preopening-text: #6b6a5f;
+
+  /* ---- Radii & shadows ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(30, 58, 47, 0.06);
+  --shadow-md: 0 10px 24px rgba(30, 58, 47, 0.1);
+  --shadow-lg: 0 16px 40px rgba(30, 58, 47, 0.14);
+
+  /* ---- Spacing scale (4px base unit) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* ---- Typography ---- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --text-display-size: 40px;
+  --text-display-weight: 700;
+  --text-display-leading: 1.15;
+  --text-display-tracking: -0.02em;
+
+  --text-h1-size: 30px;
+  --text-h1-weight: 600;
+  --text-h1-leading: 1.2;
+
+  --text-h2-size: 22px;
+  --text-h2-weight: 600;
+  --text-h2-leading: 1.3;
+
+  --text-h3-size: 17px;
+  --text-h3-weight: 600;
+  --text-h3-leading: 1.4;
+
+  --text-body-size: 15px;
+  --text-body-weight: 400;
+  --text-body-leading: 1.6;
+
+  --text-caption-size: 13px;
+  --text-caption-weight: 500;
+  --text-caption-leading: 1.4;
+
+  /* ---- Motion ---- */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+}

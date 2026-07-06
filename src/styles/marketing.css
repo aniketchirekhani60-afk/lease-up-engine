@@ -1,0 +1,92 @@
+/* -------------------------------------------------
+   MARKETING MODULE
+------------------------------------------------- */
+
+.marketing-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.checklist-section {
+  margin-bottom: var(--space-8);
+}
+
+.checklist-section-title {
+  margin-bottom: var(--space-4);
+  font-size: 18px;
+  color: var(--color-text-primary);
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.task-main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.task-status-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: var(--color-border-light);
+  color: var(--color-text-muted);
+}
+
+.task-status-icon.completed {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.task-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.task-meta {
+  margin-top: var(--space-1);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.badge-completed {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.badge-pending {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.badge-overdue {
+  background: var(--color-danger-bg);
+  color: var(--color-danger-text);
+}
+
+@media (max-width: 640px) {
+  .task-main {
+    align-items: flex-start;
+  }
+}

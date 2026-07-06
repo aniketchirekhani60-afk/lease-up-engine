@@ -1,33 +1,35 @@
-import OccupancyChart from "../components/dashboard/OccupancyChart";
-import RecentActivity from "../components/dashboard/RecentActivity";
-import CommunityTable from "../components/dashboard/CommunityTable";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
-import KpiCard from "../components/dashboard/KpiCard";
-import { kpiData } from "../data/dashboardData";
+import ExecutiveKpis from "../components/dashboard/ExecutiveKpis";
+import LeaseUpFunnel from "../components/dashboard/LeaseUpFunnel";
+import ExecutiveAlerts from "../components/dashboard/ExecutiveAlerts";
+import CommunityHealthGrid from "../components/dashboard/CommunityHealthGrid";
+import OpeningTimeline from "../components/dashboard/OpeningTimeline";
+import CommunityPerformanceTable from "../components/dashboard/CommunityPerformanceTable";
 
 function Dashboard() {
   return (
     <>
       <DashboardHeader />
 
-      <div className="dashboard-kpi-grid">
-        {kpiData.map((item) => (
-          <KpiCard
-            key={item.id}
-            title={item.title}
-            value={`${item.value}${item.unit}`}
-            target={item.target}
-            trend={item.trend}
-          />
-        ))}
+      <div className="section">
+        <ExecutiveKpis />
       </div>
 
       <div className="dashboard-charts-grid">
-        <OccupancyChart />
-        <RecentActivity />
+        <LeaseUpFunnel />
+        <ExecutiveAlerts />
       </div>
 
-      <CommunityTable />
+      <div className="section">
+        <h2 className="chart-card-title">Community Health</h2>
+        <CommunityHealthGrid />
+      </div>
+
+      <div className="section">
+        <OpeningTimeline />
+      </div>
+
+      <CommunityPerformanceTable />
     </>
   );
 }

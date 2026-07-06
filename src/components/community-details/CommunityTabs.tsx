@@ -1,18 +1,29 @@
 const TABS = ["Overview", "Marketing", "Leads", "Tours", "Move-ins", "Reports"];
+const ENABLED_TABS = ["Overview", "Marketing", "Leads"];
 
-function CommunityTabs() {
+type CommunityTabsProps = {
+  activeTab: string;
+  onTabChange: (tab: string) => void;
+};
+
+function CommunityTabs({ activeTab, onTabChange }: CommunityTabsProps) {
   return (
     <div className="community-tabs">
-      {TABS.map((tab, index) => (
-        <button
-          key={tab}
-          type="button"
-          className={index === 0 ? "tab active" : "tab"}
-          disabled={index !== 0}
-        >
-          {tab}
-        </button>
-      ))}
+      {TABS.map((tab) => {
+        const isEnabled = ENABLED_TABS.includes(tab);
+
+        return (
+          <button
+            key={tab}
+            type="button"
+            className={tab === activeTab ? "tab active" : "tab"}
+            disabled={!isEnabled}
+            onClick={() => onTabChange(tab)}
+          >
+            {tab}
+          </button>
+        );
+      })}
     </div>
   );
 }

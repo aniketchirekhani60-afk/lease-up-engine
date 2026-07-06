@@ -1,0 +1,152 @@
+/* -------------------------------------------------
+   THEME
+   Reusable component-level primitives built on the
+   tokens in variables.css: typography utilities,
+   buttons, status badges, and form fields.
+
+   These are additive — existing page stylesheets
+   (communities.css, marketing.css, dashboard.css,
+   community-details.css) already define a first
+   button/badge and keep working unchanged, since they
+   read the same color tokens. This file fills in the
+   variants and states the design system asks for
+   without touching those files.
+------------------------------------------------- */
+
+/* ---- Typography utilities ---- */
+.text-display {
+  font-size: var(--text-display-size);
+  font-weight: var(--text-display-weight);
+  line-height: var(--text-display-leading);
+  letter-spacing: var(--text-display-tracking);
+  color: var(--color-text-primary);
+}
+
+.text-h1 {
+  font-size: var(--text-h1-size);
+  font-weight: var(--text-h1-weight);
+  line-height: var(--text-h1-leading);
+  color: var(--color-text-primary);
+}
+
+.text-h2 {
+  font-size: var(--text-h2-size);
+  font-weight: var(--text-h2-weight);
+  line-height: var(--text-h2-leading);
+  color: var(--color-text-primary);
+}
+
+.text-h3 {
+  font-size: var(--text-h3-size);
+  font-weight: var(--text-h3-weight);
+  line-height: var(--text-h3-leading);
+  color: var(--color-text-primary);
+}
+
+.text-body {
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-leading);
+  color: var(--color-text-primary);
+}
+
+.text-caption {
+  font-size: var(--text-caption-size);
+  font-weight: var(--text-caption-weight);
+  line-height: var(--text-caption-leading);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Buttons ----
+   .btn / .btn-primary already exist in communities.css.
+   This adds the secondary and ghost variants. */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  border: 1px solid transparent;
+  transition: background var(--transition-base);
+}
+
+.btn-secondary:hover {
+  background: #dce8de;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.btn-ghost:hover {
+  background: var(--color-bg);
+  border-color: var(--color-text-muted);
+}
+
+/* ---- Status badges ----
+   .status-badge base + on-track/complete/attention live in
+   communities.css; badge-completed/pending/overdue live in
+   marketing.css. This fills in the remaining lifecycle tones. */
+.status-lease-up {
+  background: var(--color-leaseup-bg);
+  color: var(--color-leaseup-text);
+}
+
+.status-pre-opening {
+  background: var(--color-preopening-bg);
+  color: var(--color-preopening-text);
+}
+
+.status-pending {
+  background: var(--color-neutral-bg);
+  color: var(--color-neutral-text);
+}
+
+.status-completed {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+/* ---- Forms ----
+   Base styling for any input/select/textarea in the app,
+   so new forms are premium by default without per-page CSS. */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-tint);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}

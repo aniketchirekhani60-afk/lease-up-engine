@@ -26,6 +26,140 @@
   font-weight: 500;
 }
 
+/* Lease-Up Funnel */
+.funnel-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.funnel-stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+  font-size: 14px;
+}
+
+.funnel-stage-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.funnel-stage-count {
+  color: var(--color-text-secondary);
+}
+
+.funnel-stage-percent {
+  margin-left: var(--space-2);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Community Health */
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-5);
+}
+
+.health-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.health-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.health-stat-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.health-stat-value {
+  margin-top: var(--space-1);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Opening Timeline */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.timeline-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+}
+
+.timeline-community-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.timeline-days {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.timeline-caption {
+  margin-top: var(--space-2);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* Executive Alerts */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.alert-item {
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.alert-item.severity-critical {
+  border-left-color: var(--color-danger-text);
+  background: var(--color-danger-bg);
+}
+
+.alert-item.severity-warning {
+  border-left-color: var(--color-warning-text);
+  background: var(--color-warning-bg);
+}
+
+.alert-item.severity-success {
+  border-left-color: var(--color-success-text);
+  background: var(--color-success-bg);
+}
+
+.alert-message {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.alert-meta {
+  margin-top: var(--space-1);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
 @media (max-width: 1024px) {
   .dashboard-charts-grid {
     grid-template-columns: 1fr;
@@ -34,6 +168,10 @@
 
 @media (max-width: 640px) {
   .dashboard-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-card-stats {
     grid-template-columns: 1fr;
   }
 }

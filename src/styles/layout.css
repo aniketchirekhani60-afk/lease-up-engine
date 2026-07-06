@@ -12,7 +12,7 @@
 .sidebar {
   width: 240px;
   flex-shrink: 0;
-  background: var(--color-accent-dark);
+  background: var(--color-primary);
   color: var(--color-text-inverse);
   padding: var(--space-5);
   min-height: 100vh;
@@ -23,31 +23,42 @@
   align-items: center;
   gap: var(--space-2);
   margin-bottom: var(--space-8);
-  font-size: 20px;
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .nav-link {
   display: block;
   padding: 12px;
+  padding-left: 15px;
   margin-bottom: var(--space-2);
+  border-left: 3px solid transparent;
   border-radius: var(--radius-sm);
-  color: var(--color-text-inverse);
-  transition: background 0.15s ease;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-inverse);
 }
 
 .nav-link.active {
-  background: var(--color-accent);
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: var(--brand-cream);
+  color: var(--color-text-inverse);
   font-weight: 600;
 }
 
 /* Main content area */
 .main-content {
   flex: 1;
-  padding: var(--space-8);
+  padding: var(--space-12);
   background: var(--color-bg);
   min-height: 100vh;
 }
@@ -74,13 +85,15 @@
 
 .page-title {
   margin: 0;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: var(--text-h1-size);
+  font-weight: var(--text-h1-weight);
+  line-height: var(--text-h1-leading);
   color: var(--color-text-primary);
 }
 
 .page-subtitle {
   margin-top: var(--space-2);
+  font-size: var(--text-body-size);
   color: var(--color-text-secondary);
 }
 
